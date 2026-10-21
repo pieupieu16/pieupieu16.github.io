@@ -134,8 +134,7 @@
                 <i class="fa-solid fa-building me-1"></i> Tập đoàn Vingroup &bull; Công ty Cổ phần Vin Robotics
               </div>
               <div class="text-muted small mt-1">
-                <i class="fa-solid fa-user-tie me-1"></i> <b>Mentors:</b> Nguyễn Toàn, Nguyễn Mạnh Cường
-                &bull; <i class="fa-solid fa-diagram-project me-1"></i> <b>Project:</b> End-to-End Robot Learning on OpenArm 16-DoF
+                <i class="fa-solid fa-diagram-project me-1"></i> <b>Project:</b> End-to-End Robot Learning on OpenArm 16-DoF
               </div>
             </div>
             <div class="flex-shrink-0 mt-2 mt-md-0 text-md-end">
@@ -150,21 +149,6 @@
           </p>
 
           <ul class="mb-3 ps-3">
-            <li class="mb-2">
-              <b>Teleoperation & Multi-Sensor Synchronization:</b> Designed Master-Slave Leader-Follower teleoperation leveraging Meta headset. Resolved timestamp skew between 30 FPS USB/UVC cameras and 50 Hz CAN-bus joint state feedback via circular ring buffers and nearest-timestamp pairing.
-            </li>
-            <li class="mb-2">
-              <b>Data Curation & Augmentation:</b> Collected and curated <b>120+ demonstration trajectories</b> under diverse lighting, background, and initial object position variations. Applied Random Crop, Color Jitter, Gaussian Blur, and $z$-score joint angle normalization to stabilize gradient backpropagation.
-            </li>
-            <li class="mb-2">
-              <b>Action Chunking with Transformers (ACT) + CVAE:</b> Trained a Conditional VAE Transformer model to estimate multi-modal action distributions with chunk size $K=50$ (1-second prediction horizon). Implemented <b>Exponential Temporal Ensembling</b> over overlapping chunks, <b>eliminating joint oscillations</b> and increasing trajectory smoothness by <b>38%</b>.
-            </li>
-            <li class="mb-2">
-              <b>Inference Optimization & Edge Deployment:</b> Converted PyTorch models to ONNX and built an optimized <b>NVIDIA TensorRT FP16 engine</b> with Conv-BatchNorm-ReLU layer fusion and CUDA memory optimizations. Slashed inference latency from <b>112 ms &rarr; 24.6 ms</b>, enabling <b>40.6 Hz real-time closed-loop actuation</b>.
-            </li>
-            <li class="mb-2">
-              <b>Hardware Assembly & Safety Interlocks:</b> Performed mechanical assembly and zero-calibration for 16 servo motors on OpenArm. Implemented workspace virtual bounding boxes, software backlash compensation, and torque anomaly detection for automatic emergency stop (E-stop).
-            </li>
             <li>
               <b>Quantitative Results:</b> Achieved <b>87.5% task success rate (35/40 trials)</b> on precision pick-and-place with $\pm 4$cm accuracy, significantly outperforming heuristic baselines (60%).
             </li>
