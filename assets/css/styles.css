@@ -1,0 +1,549 @@
+/* ==========================================================================
+   Trần Hải Quân - Portfolio / CV Stylesheet
+   Theme: Vin Robotics Navy & Tech Accent
+   Inspired by Start Bootstrap Resume & ngtoanrob.github.io
+   ========================================================================== */
+
+:root {
+  --bs-primary: #0B2C5B;
+  --bs-primary-rgb: 11, 44, 91;
+  --bs-accent: #1877F2;
+  --bs-accent-rgb: 24, 119, 242;
+  --bs-dark-accent: #071c3a;
+  --bs-navy-gradient: linear-gradient(135deg, #0B2C5B 0%, #154585 50%, #1877F2 100%);
+  --bs-card-gradient: linear-gradient(145deg, #ffffff 0%, #f8fafd 100%);
+  
+  --bs-gray-100: #F5F7FA;
+  --bs-gray-200: #E4E7EB;
+  --bs-gray-300: #DCE0E6;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #323232;
+  --bs-gray-900: #1a1e24;
+
+  --bs-font-heading: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bs-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bs-font-body);
+  color: var(--bs-gray-800);
+  background-color: #ffffff;
+  line-height: 1.65;
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17.5rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .heading-font {
+  font-family: var(--bs-font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bs-primary);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 3.4rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--bs-navy-gradient);
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 1.85rem;
+  color: var(--bs-primary);
+}
+
+.subheading {
+  font-family: var(--bs-font-heading);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--bs-gray-600);
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: var(--bs-accent);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #0d5bbd;
+  text-decoration: underline;
+}
+
+.text-primary {
+  color: var(--bs-accent) !important;
+}
+
+.text-vinnavy {
+  color: var(--bs-primary) !important;
+}
+
+.bg-vinnavy {
+  background-color: var(--bs-primary) !important;
+}
+
+.bg-vin-gradient {
+  background: var(--bs-navy-gradient) !important;
+}
+
+/* ==========================================================================
+   Navigation Bar (SideNav)
+   ========================================================================== */
+#sideNav {
+  background: linear-gradient(180deg, #071c3a 0%, #0B2C5B 50%, #0f356b 100%) !important;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-family: var(--bs-font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  margin: 0.15rem 0.5rem;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #ffffff;
+  background: var(--bs-accent);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17.5rem;
+    height: 100vh;
+    padding: 1.5rem 0.5rem;
+    overflow-y: auto;
+  }
+
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sideNav .img-profile {
+    max-width: 10.5rem;
+    max-height: 10.5rem;
+    border: 0.45rem solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  #sideNav .img-profile:hover {
+    transform: scale(1.04);
+    border-color: var(--bs-accent);
+  }
+}
+
+/* ==========================================================================
+   Sections & Layout
+   ========================================================================== */
+section.resume-section {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  max-width: 82rem;
+}
+
+section.resume-section .resume-section-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+hr.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(220, 224, 230, 0) 0%, rgba(220, 224, 230, 0.8) 50%, rgba(220, 224, 230, 0) 100%);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Social Icons
+   ========================================================================== */
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.25rem;
+  width: 3.25rem;
+  background: var(--bs-gray-100);
+  color: var(--bs-primary);
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  margin-right: 0.85rem;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icons .social-icon:hover {
+  background: var(--bs-accent);
+  color: #ffffff;
+  border-color: var(--bs-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(24, 119, 242, 0.35);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Custom UI Cards & Badges
+   ========================================================================== */
+.experience-card, .project-card, .report-card {
+  background: var(--bs-card-gradient);
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::before, .project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--bs-accent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.experience-card:hover, .project-card:hover, .report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(11, 44, 91, 0.08);
+  border-color: rgba(24, 119, 242, 0.4);
+}
+
+.experience-card:hover::before, .project-card:hover::before {
+  opacity: 1;
+}
+
+.featured-experience {
+  border: 1.5px solid rgba(24, 119, 242, 0.35);
+  background: linear-gradient(145deg, #ffffff 0%, #f4f8fe 100%);
+}
+
+.featured-experience::before {
+  opacity: 1;
+  width: 5px;
+  background: var(--bs-navy-gradient);
+}
+
+.badge-tech {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.32rem 0.75rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  background-color: #eaf2fd;
+  color: var(--bs-primary);
+  border: 1px solid rgba(24, 119, 242, 0.2);
+  transition: all 0.2s ease;
+}
+
+.badge-tech:hover {
+  background-color: var(--bs-accent);
+  color: #ffffff;
+  border-color: var(--bs-accent);
+  transform: translateY(-1px);
+}
+
+.badge-highlight {
+  background: var(--bs-navy-gradient);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+}
+
+/* Stat Counters */
+.stat-box {
+  background: #ffffff;
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 10px;
+  padding: 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--bs-accent);
+}
+
+.stat-value {
+  font-family: var(--bs-font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bs-gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Tool Grid & Icons
+   ========================================================================== */
+.tool-category-card {
+  background: #ffffff;
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 12px;
+  padding: 1.4rem;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  transition: all 0.25s ease;
+}
+
+.tool-category-card:hover {
+  border-color: var(--bs-accent);
+  box-shadow: 0 8px 20px rgba(11, 44, 91, 0.06);
+}
+
+.tool-category-title {
+  font-family: var(--bs-font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--bs-gray-200);
+}
+
+.tool-item {
+  display: flex;
+  align-items: center;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--bs-gray-800);
+  transition: background 0.15s ease;
+}
+
+.tool-item:hover {
+  background-color: var(--bs-gray-100);
+}
+
+.tool-item iconify-icon, .tool-item i {
+  font-size: 1.45rem;
+  width: 28px;
+  margin-right: 0.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Callout / Latex Box Styling
+   ========================================================================== */
+.latex-callout {
+  background: #f7f9fc;
+  border: 1px solid #d2dbe6;
+  border-left: 4px solid var(--bs-primary);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.latex-callout-title {
+  font-family: var(--bs-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table th {
+  background: var(--bs-primary);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.custom-table td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--bs-gray-200);
+  font-size: 0.92rem;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #fcfdfe;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f6fc;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-primary-custom {
+  background: var(--bs-navy-gradient);
+  border: none;
+  color: #ffffff;
+  font-family: var(--bs-font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(11, 44, 91, 0.25);
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(135deg, #154585 0%, #1877F2 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(24, 119, 242, 0.4);
+  text-decoration: none;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  border: 2px solid var(--bs-accent);
+  color: var(--bs-accent);
+  font-family: var(--bs-font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-custom:hover {
+  background: var(--bs-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+/* ==========================================================================
+   Responsive tweaks
+   ========================================================================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  .stat-value {
+    font-size: 1.8rem;
+  }
+}
